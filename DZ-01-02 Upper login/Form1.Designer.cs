@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Tpassword = new System.Windows.Forms.TextBox();
             this.entrance = new System.Windows.Forms.Button();
+            this.form = new System.Windows.Forms.Button();
+            this.Llogin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exit
@@ -90,15 +92,35 @@
             this.entrance.UseVisualStyleBackColor = true;
             this.entrance.Click += new System.EventHandler(this.entrance_Click);
             // 
+            // form
+            // 
+            this.form.Location = new System.Drawing.Point(133, 179);
+            this.form.Name = "form";
+            this.form.Size = new System.Drawing.Size(106, 23);
+            this.form.TabIndex = 0;
+            this.form.Text = "Новая форма";
+            this.form.UseVisualStyleBackColor = true;
+            this.form.Click += new System.EventHandler(this.form_Click);
+            // 
+            // Llogin
+            // 
+            this.Llogin.AutoSize = true;
+            this.Llogin.Location = new System.Drawing.Point(285, 14);
+            this.Llogin.Name = "Llogin";
+            this.Llogin.Size = new System.Drawing.Size(0, 13);
+            this.Llogin.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 207);
+            this.Controls.Add(this.Llogin);
             this.Controls.Add(this.Tpassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Tlogin);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.form);
             this.Controls.Add(this.entrance);
             this.Controls.Add(this.exit);
             this.Name = "Form1";
@@ -113,8 +135,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Tlogin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Tpassword;
         private System.Windows.Forms.Button entrance;
+        private System.Windows.Forms.Button form;
+        public System.Windows.Forms.TextBox Tpassword;
+        public System.Windows.Forms.Label Llogin;
     }
 }
 

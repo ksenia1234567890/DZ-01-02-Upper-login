@@ -11,6 +11,8 @@ using Npgsql;
 
 namespace DZ_01_02_Upper_login
 {
+    
+    
     public partial class Form1 : Form
     {
         public Form1()
@@ -18,7 +20,7 @@ namespace DZ_01_02_Upper_login
             InitializeComponent();
         }
 
-        private void entrance_Click(object sender, EventArgs e)
+        public void entrance_Click(object sender, EventArgs e)
         {
             try
             {
@@ -33,10 +35,8 @@ namespace DZ_01_02_Upper_login
                 con.Close();
                 if (check == Tlogin.Text)
                 {
-                    Label login = new Label();
-                    login.Parent = this;
-                    login.Location = new Point(286, 9);
-                    login.Text = check;
+                    Llogin.Text = check;
+                    Login.textLogin = check;
                 }
                 
 
@@ -50,6 +50,12 @@ namespace DZ_01_02_Upper_login
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void form_Click(object sender, EventArgs e)
+        {
+            NewForm nf = new NewForm();
+            nf.ShowDialog();
         }
     }
 }
